@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<style>
+    body {
+    background-color: black;
+}
+</style>
+<body>
+
+    <h2 style="text-align: center;color: rgb(232, 238, 240);"><strong>Provide the below details</strong></h2>
+    <div class="jumbotron">
+        <div class="container">
+            <form method="POST">
+                <div class="fieldWrapper">
+                    <table>
+                        {{ form.as_table }}
+                        {% csrf_token %}
+                        <tr>
+                            <td>&nbsp;</td>
+                            <p></p>
+                            <td></td>
+                        </tr>
+                    
+                    </table>
+
+                </div>
+               
+                
+                <input class="btn btn-primary" type="submit" name="Submit">
+                <a style="text-decoration: none;" class="btn btn-primary" href="{% url 'UI:index' %}">HOME</a></button>
+            </form>
+        </div>
+    </div> 
+    
+    
+</body>
+</html>
